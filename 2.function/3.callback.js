@@ -35,3 +35,7 @@ let chef2 = function(food){
 let waiter = function(food, chef){
     return chef(food)
 }
+
+console.log(waiter('짜장면', chef1))
+
+console.log(waiter('짜장면', chef2))
