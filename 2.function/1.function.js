@@ -52,3 +52,10 @@ let argFn = function(){
     return 'star'
 }
 myFn(argFn)
+
+let showMsg = function(from, msg='no messsage'){
+    console.log(`${from}:${msg}`)
+}
+
+showMsg('thrinity', 'follow rabbit')
+showMsg('trinity')
