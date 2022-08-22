@@ -46,3 +46,7 @@ console.log(user + 100)
 userStr = JSON.stringify(user)
 console.log(userStr)
 console.log(typeof userStr)
+
+// serializing 객체를 기본타입으로 늘어트리는것 
+
+//deserializing 객체로 다시 뭉치는거 

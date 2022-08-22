@@ -10,7 +10,7 @@ user={
     },
     'nick name': 'tiger face',
     age:13,
-    interests:['music', 'mobie'],
+    interests:['music', 'movie'],
     sing: () => console.log('lala')
 }
 
@@ -35,5 +35,7 @@ key = 'age'
 console.log(user[key])
 
 let man = {
-    name 
+    name :'samuel',
+    1: 'one',
+    2:'two'
 }

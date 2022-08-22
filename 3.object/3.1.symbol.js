@@ -13,6 +13,8 @@ user[userId]=2
 //과제 : user객체를 iterating 해서 , key등을 출력하라
 for(let key in user) console.log(key)
 
+console.log(Object.keys(user))
+
 id1 = Symbol.for('id')
 id2 = Symbol.for('id')
 console.log(id1==id2)
