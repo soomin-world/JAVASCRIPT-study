@@ -3,17 +3,19 @@
   <head>
     <title></title>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const select = document.querySelector('select')
-        const p = document.querySelector('p')
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.querySelector("select");
+        const p = document.querySelector("p");
 
-        select.addEventListener('change', (event) => {
-          const options = event.currentTarget.options
-          const index = event.currentTarget.options.selectedIndex
+        select.addEventListener("change", (event) => {
+          // select같은 경우 change사용
+          const options = event.currentTarget.options;
+          const index = event.currentTarget.options.selectedIndex;
 
-          p.textContent = `선택: ${options[index].textContent}`
-        })
-      })
+          p.textContent = `선택: ${options[index].textContent}`;
+          // textContent를 하지 않으면, 선택: object HTMLOptionElement가 출력
+        });
+      });
     </script>
   </head>
   <body>
