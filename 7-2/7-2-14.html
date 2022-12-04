@@ -2,22 +2,25 @@
 <html>
   <head>
     <title></title>
+    <!-- 글자수출력 -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const textarea = document.querySelector('textarea')
-        const h1 = document.querySelector('h1')
-        let timerId
+      document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.querySelector("textarea");
+        const h1 = document.querySelector("h1");
+        let timerId;
 
-        textarea.addEventListener('focus', (event) => {
+        textarea.addEventListener("focus", (event) => {
+          // focus 입력양식에 초점을 맞춘경우 (커서 위치)
           timerId = setInterval(() => {
-            const length = textarea.value.length
-            h1.textContent = `글자 수: ${length}`
-          }, 50)
-        })
-        textarea.addEventListener('blur', (event) => {
-          clearInterval(timerId)
-        })
-      })
+            const length = textarea.value.length;
+            h1.textContent = `글자 수: ${length}`;
+          }, 50);
+        }); // setInterval을 활용한 이유는 키보드이벤트의 정확성이 떨어지기때문
+        textarea.addEventListener("blur", (event) => {
+          //blur 입력양식 초점이 비활성화된경우
+          clearInterval(timerId);
+        });
+      });
     </script>
   </head>
   <body>
