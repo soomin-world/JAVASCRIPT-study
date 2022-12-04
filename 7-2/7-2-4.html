@@ -3,28 +3,29 @@
   <head>
     <title></title>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const input = document.querySelector('input')
-        const button = document.querySelector('button')
-        const p = document.querySelector('p')
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
 
-        button.addEventListener('click', () => {
+        button.addEventListener("click", () => {
           // 입력을 숫자로 변환합니다.
-          const inch = Number(input.value)
+          const inch = Number(input.value);
           // 숫자가 아니라면 바로 리턴합니다.
           if (isNaN(inch)) {
-            p.textContent = '숫자를 입력해주세요'
-            return
+            p.textContent = "숫자를 입력해주세요";
+            return;
           }
           // 변환해서 출력합니다.
-          const cm = inch * 2.54
-          p.textContent = `${cm} cm`
-        })
-      })
+          const cm = inch * 2.54;
+          p.textContent = `${cm} cm`;
+        }); // 위 부분에서 else를 사용하지 않은 이유는 들여쓰기를 줄여 깔끔하게 리턴가능하기때문
+        // 조기 리턴이라고 이름까지 붙여져 있는 패턴이라고함.
+      });
     </script>
   </head>
   <body>
-    <input type="text"> inch<br>
+    <input type="text" /> inch<br />
     <button>계산</button>
     <p></p>
   </body>
