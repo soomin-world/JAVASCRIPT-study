@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 남은 글자수 출력하기
+      document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.querySelector("textarea");
+        const h1 = document.querySelector("h1");
+
+        textarea.addEventListener("keyup", (event) => {
+          const length = textarea.value.length;
+          // value속성으로 입력 양식의 글자를 읽어드릴 수 있음.
+          h1.textContent = `글자 수: ${length}`;
+          // 실행결과 -> 글자수 : 5
+        });
+      });
+      // keyup에서 발생가능한 오류: 꾹 눌렀을시 한글자로 인식하는 경우가 있음.
+      // keypress를 이용하면, 공백이 들어가기 전까지는 글자수를 세지 않는 경우가 생김.
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <textarea></textarea>
+  </body>
+</html>

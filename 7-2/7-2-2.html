@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.querySelector("h1");
+        const print = (event) => {
+          let output = "";
+          output += `alt: ${event.altKey}<br>`;
+          output += `ctrl: ${event.ctrlKey}<br>`;
+          output += `shift: ${event.shiftKey}<br>`;
+          // 이벤트가 발생하면, true or false가 반환됨.
+          output += `code: ${
+            typeof event.code !== "undefined" ? event.code : event.keyCode
+            // 구버전은 code가 속성을 지원하지 않기때문에 keyCode를 넣어놈
+          }<br>`;
+          h1.innerHTML = output;
+        };
+
+        document.addEventListener("keydown", print); // key가 눌릴때 출력
+        document.addEventListener("keyup", print); // key가 떨어질 때 출력
+        // keyup 주석후 변화 확인하기
+      });
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+</html>
