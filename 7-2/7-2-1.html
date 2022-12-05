@@ -8,6 +8,9 @@
         const textarea = document.querySelector("textarea");
         const h1 = document.querySelector("h1");
 
+        //value 속성 :값 추출!
+        // keydown(눌렀을때), keypress(뭘눌렀는지 인식했을때), 입력양식에 값이 들어감
+        // change 이벤트: 입력양식 전체에 값 입력이 끝났을때
         textarea.addEventListener("keyup", (event) => {
           const length = textarea.value.length;
           // value속성으로 입력 양식의 글자를 읽어드릴 수 있음.
@@ -15,6 +18,7 @@
           // 실행결과 -> 글자수 : 5
         });
       });
+      //입력 양식 추출해서 사용할땐 keyup이 적합
       // keyup에서 발생가능한 오류: 꾹 눌렀을시 한글자로 인식하는 경우가 있음.
       // keypress를 이용하면, 공백이 들어가기 전까지는 글자수를 세지 않는 경우가 생김.
     </script>
